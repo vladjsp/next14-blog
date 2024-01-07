@@ -4,20 +4,24 @@ import styles from './singlepost.module.css';
 import { PostUser } from '@/components';
 import { getPost } from '@/libs';
 
-// TODO: delete this example code
-// const getData = async (slug) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
-//   if (!res.ok) {
-//     throw new Error('Something went wrong');
-//   }
+  if (!res.ok) {
+    throw new Error('Something went wrong');
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
-  const post = await getPost(slug);
+
+  // FETCH DATA WITH API
+  const post = await getData(slug);
+
+  // FETCH DATA WITHOUT API
+  // const post = await getPost(slug);
 
   return {
     title: post.title,

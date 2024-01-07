@@ -7,25 +7,25 @@ export const metadata = {
   description: 'Blog description',
 };
 
-// TODO: delete
-// const getData = async () => {
-//   const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
-//     next: { revalidate: 3600 },
-//   });
+const getData = async () => {
+  const res = await fetch('http://localhost:3000/api/blog', {
+    next: { revalidate: 3600 },
+  });
 
-//   if (!res.ok) {
-//     throw new Error('Something went wrong');
-//   }
+  if (!res.ok) {
+    throw new Error('Something went wrong');
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 const BlogPage = async () => {
-  // TODO: delete
-  // const posts = await getData();
+  // Fetch posts with an api
+  const posts = await getData();
 
-  const posts = await getPosts();
-  console.log('posts:', posts);
+  // Fetch posts without an api
+  // const posts = await getPosts();
+
   return (
     <div className={styles.container}>
       {posts &&
