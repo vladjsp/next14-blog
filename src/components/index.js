@@ -2,5 +2,7 @@ import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 import PostCard from './postCard/postCard';
 import PostUser from './postUser/postUser';
+import RegisterForm from './registerForm/registerForm';
+import LoginForm from './loginForm/loginPage';
 
-export { Navbar, Footer, PostCard, PostUser };
+export { Navbar, Footer, PostCard, PostUser, RegisterForm, LoginForm };
