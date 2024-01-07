@@ -1,6 +1,6 @@
 import { PostCard } from '@/components';
 import styles from './blog.module.css';
-import { getPosts } from '@/lib/data';
+import { getPosts } from '@/libs';
 
 export const metadata = {
   title: 'Blog Page',

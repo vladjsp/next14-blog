@@ -1,8 +1,8 @@
+import { Suspense } from 'react';
 import Image from 'next/image';
 import styles from './singlepost.module.css';
 import { PostUser } from '@/components';
-import { Suspense } from 'react';
-import { getPost } from '@/lib/data';
+import { getPost } from '@/libs';
 
 // TODO: delete this example code
 // const getData = async (slug) => {
