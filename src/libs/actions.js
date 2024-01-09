@@ -6,8 +6,8 @@ import { Post, User } from './models';
 import { connectToDb } from './connectToDb';
 import { signIn, signOut } from './auth';
 
-export const addPost = async (formData) => {
-  const { title, desc, slug, userId } = Object.fromEntries(formData);
+export const addPost = async (prevstate, formData) => {
+  const { title, desc, slug, img, userId } = Object.fromEntries(formData);
 
   try {
     connectToDb();
@@ -15,6 +15,7 @@ export const addPost = async (formData) => {
       title,
       desc,
       slug,
+      img,
       userId,
     });
 
