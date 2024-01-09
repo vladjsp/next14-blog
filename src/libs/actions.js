@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 import bcrypt from 'bcryptjs';
 import { Post, User } from './models';
 import { connectToDb } from './connectToDb';
-import { signIn } from './auth';
+import { signIn, signOut } from './auth';
 
 export const addPost = async (formData) => {
   const { title, desc, slug, userId } = Object.fromEntries(formData);
