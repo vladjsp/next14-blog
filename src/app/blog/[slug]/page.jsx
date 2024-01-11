@@ -32,7 +32,6 @@ export const generateMetadata = async ({ params }) => {
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
 
-  // TODO: delete this example
   // const post = await getData(slug);
 
   const post = await getPost(slug);

@@ -10,6 +10,5 @@ export const GET = async () => {
   } catch (err) {
     console.log(err);
     return NextResponse.error();
-    // throw new Error("Failed to fetch posts!");
   }
 };
